@@ -3,7 +3,7 @@
     margin: 0%;
 }
 body{
-    background-image: url('./bg.jpg');
+    background-image: url('C:/Users/anjan/OneDrive/Desktop/vs codes/java/Personal_webpage/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -90,6 +90,10 @@ border: 5px solid rgb(151, 242, 151);
     padding:5% 5% 0% 5%;
     text-overflow: ellipsis;
 }
+.addclassbut{
+    box-shadow: 0 0 10px #ca82e0, 0 0 20px #ca82e0, 0 0 30px #ca82e0, 0 0 40px #ca82ca;
+
+}
 .wcont button{
     width:80%;
     margin:10% 10% 10% 10%;
@@ -103,7 +107,7 @@ border: 5px solid rgb(151, 242, 151);
     font-size: 20px;
 }
 .wcont button:hover{
-    box-shadow: 2% 2% 2% 2% green;
+    border: 3px solid green;
 }
 .textcontcontact{
     margin-top: 10%;
@@ -151,6 +155,33 @@ border: 5px solid rgb(151, 242, 151);
 }
 .aboutblockmatter{
     padding: 5% 5% 5% 5%;
+}
+.education{
+    width:90%;
+    height: fit-content;
+    margin-top: 10%;
+    margin-left: 5%;
+    backdrop-filter: blur(20px);
+    border:5px solid rgb(174, 174, 96);
+}
+.instu{
+    width:90%;
+    height: fit-content;
+    margin: 5% 5% 5% 5%;
+    border:3px solid olive;
+}
+.instuimg{
+    align-content: center;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.instuimg img{
+    width: 90%;
+    height: fit-content;
+}
+.instumatter{
+    padding: 5% 5% 5% 5%;
+
 }
 @media screen and (max-width:510px){
 .sidenav{
