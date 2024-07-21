@@ -3,7 +3,7 @@
     margin: 0%;
 }
 body{
-    background-image: url('./bg.jpg');
+    background-image: url('C:/Users/anjan/OneDrive/Desktop/vs codes/java/Personal_webpage/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -18,7 +18,7 @@ b{
     
 }
 .textonimg{
-    width: 80%;
+    
     position: absolute;
     top:35%;
     left:10%;
@@ -31,9 +31,6 @@ b{
     font-size: 36px;
     transform: scaleX(1.3);
     text-shadow: 2px 2px rgb(142, 238, 142);
-}
-.imgandtext{
-    margin-bottom: 20px;
 }
 .textcont{
     width:fit-content;
@@ -183,6 +180,62 @@ border: 5px solid rgb(151, 242, 151);
     padding: 5% 5% 5% 5%;
 
 }
+@media screen and (min-width:650px) {
+    .toggle{
+        display: none;
+    }
+    .sidenav{
+        display: block !important;
+        position: fixed;
+        top:0px;
+        left:0px;
+        width: 100%;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        border: 5px solid rgb(139, 221, 139);
+    }
+    .sidenav ul{
+        list-style-type:none;
+        margin-left: 25%;
+    }
+    .sidenav ul li{
+        display: inline-flex;
+        padding: 2% 3% 0% 2%;
+        font-size: 30px;
+        color: antiquewhite;
+    }
+    .sidenav ul li svg{
+        position: relative;
+        top:50%;
+        right: 5%;
+        width: 35px;
+        height: 35px;
+    }
+    .sidenav ul li:hover{
+        background-color: skyblue;
+        color:green;
+    }
+    .img{
+        width: 35%;
+        height: fit-content;
+    }
+    .textonimg{
+        margin-top: 10%;
+    }
+    .textonimg:hover{
+        font-size: 40px;
+        text-shadow: 2px 2px green blue;
+    }
+    .container {
+        width:10%;
+        position: relative;
+        top:-10%;
+        left:35%;
+    }
+    .workspace {
+        display: inline-flex;
+    }
+}
 @media screen and (max-width:510px){
 .sidenav{
     display: none;
@@ -274,4 +327,10 @@ border: 5px solid rgb(151, 242, 151);
     .textonimg:hover{
         font-size: 27px;
     }
+}
+@media screen and (max-width:510px) and (min-height:800px) {
+    .toggle{
+        display: block;
+    }
+    
 }
