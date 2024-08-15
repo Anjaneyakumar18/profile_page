@@ -82,13 +82,13 @@ b {
     height: fit-content;
     transition: border 0.3s;
 }
-.wcontimg viedo {
+.wcontimg video {
     width: 100%;
     margin: 5% 0;
     height: fit-content;
     transition: border 0.3s;
 }
-.wcontimg viedo:hover {
+.wcontimg video:hover {
     border: 5px solid rgb(151, 242, 151);
 }
 .wcontimg img:hover {
