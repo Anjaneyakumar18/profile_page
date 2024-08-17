@@ -236,7 +236,19 @@ b {
         margin: 5px;
     }
 }
-
+#downloadResume{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom:2% ;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 2%;
+    border: 3px solid rgb(221, 234, 117);
+    height: 5%;
+    color: aqua;
+    font-size: 20px;
+    transition: border 0.3s;
+}
 @media screen and (max-width: 510px) {
     body{
         background-image: url('./bg3.jpg');
