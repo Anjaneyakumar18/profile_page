@@ -1,8 +1,9 @@
-var toggle = true;
+var toggle = false;
 var sn = document.querySelector(".sidenav");
 
 document.querySelector(".toggle").addEventListener("click", function() {
-    sn.style.display = toggle ? "block" : "none";
+    sn.style.transition = "0.45s";
+    sn.style.transform = toggle? "translateX(-220px)": "translateX(0px)";
     toggle = !toggle;
 });
 
@@ -63,12 +64,30 @@ Array.from(elements).forEach((ele) => {
 document.addEventListener("click", function(event) {
     var sidenav = document.querySelector(".sidenav");
     var isClickInsideMenu = sidenav.contains(event.target);
-    var isClickOnToggle = event.target.closest(".toggle") !== null; // Check if the click is on the toggle or a child of it
+    var isClickOnToggle = event.target.closest(".toggle") !== null; 
 
     if (!isClickInsideMenu && !isClickOnToggle) {
         sidenav.style.display = "none";
         toggle=!toggle
     }
+});
+
+
+
+document.querySelectorAll('.wcont a button').forEach((ele) => {
+    ele.addEventListener('click', function() {
+        ele.classList.add("clicked");  
+        setTimeout(() => {
+            ele.classList.remove("clicked");  
+        }, 300);
+    });
+});
+document.getElementById('downloadResume').addEventListener('click', function() {
+    const a = document.createElement('a');
+    
+    a.href = './resume.pdf';  
+    a.download = 'Anjaneya_kumar.pdf';  
+    a.click();
 });
 
 
