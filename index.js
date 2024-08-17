@@ -7,7 +7,6 @@ document.querySelector(".toggle").addEventListener("click", function() {
     toggle = !toggle;
 });
 
-
 var home = document.querySelector(".home");
 var workspace = document.querySelector(".workspace");
 var about = document.querySelector(".about");
@@ -39,10 +38,20 @@ document.querySelectorAll(".sidenav ul li").forEach(function(ele, index) {
                 helper(contact);
                 break;
         }
-        // Always hide the sidebar after selecting an item (if it's open)
-        sn.style.display = "none";
-        toggle = true; // Reset toggle state
+
+        
     });
+});
+
+document.addEventListener("click", function(event) {
+    var sidenav = document.querySelector(".sidenav");
+    var isClickInsideMenu = sidenav.contains(event.target);
+    var isClickOnToggle = event.target.closest(".toggle") !== null; 
+
+    if (!isClickInsideMenu && !isClickOnToggle) {    
+        sidenav.style.transform = "translateX(-220px)";
+        toggle = false;  // Ensure toggle state is correctly reset
+    }
 });
 
 function displayLettersOneByOne(element, text, delay) {
@@ -62,18 +71,6 @@ Array.from(elements).forEach((ele) => {
     const text = "Hi!👋 I'M Anjaneya Kumar"; // Your desired text
     displayLettersOneByOne(ele, text, 150); // Adjust the delay as needed
 });
-document.addEventListener("click", function(event) {
-    var sidenav = document.querySelector(".sidenav");
-    var isClickInsideMenu = sidenav.contains(event.target);
-    var isClickOnToggle = event.target.closest(".toggle") !== null; 
-
-    if (!isClickInsideMenu && !isClickOnToggle) {    
-        sidenav.style.transform = "translateX(-220px)";
-        toggle=!toggle
-    }
-});
-
-
 
 document.querySelectorAll('.wcont a button').forEach((ele) => {
     ele.addEventListener('click', function() {
@@ -83,12 +80,10 @@ document.querySelectorAll('.wcont a button').forEach((ele) => {
         }, 300);
     });
 });
+
 document.getElementById('downloadResume').addEventListener('click', function() {
     const a = document.createElement('a');
-    
     a.href = './resume.pdf';  
     a.download = 'Anjaneya_kumar.pdf';  
     a.click();
 });
-
-
