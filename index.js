@@ -20,7 +20,7 @@ function helper(curr) {
     curr.style.display = "block";
     currentSection = curr;
     sn.style.transform = "translateX(-220px)";
-    toggle = true; // Reset toggle state to ensure sidebar can be toggled again
+    toggle = false; 
 }
 
 document.querySelectorAll(".sidenav ul li").forEach(function(ele, index) {
@@ -67,8 +67,8 @@ document.addEventListener("click", function(event) {
     var isClickInsideMenu = sidenav.contains(event.target);
     var isClickOnToggle = event.target.closest(".toggle") !== null; 
 
-    if (!isClickInsideMenu && !isClickOnToggle) {
-        sidenav.style.display = "none";
+    if (!isClickInsideMenu && !isClickOnToggle) {    
+        sidenav.style.transform = "translateX(-220px)";
         toggle=!toggle
     }
 });
