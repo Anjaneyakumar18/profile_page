@@ -248,7 +248,11 @@ b {
         display:block;
     }
     .sidenav {
-        display: none;
+        display: block;
+        transform: translateX(-220px);
+        position: fixed;
+        top:5px;
+        left:-210px;
         width: 50%;
         height: fit-content;
         border: 5px solid rgb(67, 65, 45);
