@@ -2,10 +2,11 @@ var toggle = false;
 var sn = document.querySelector(".sidenav");
 
 document.querySelector(".toggle").addEventListener("click", function() {
-    sn.style.transition = "0.45s";
-    sn.style.transform = toggle? "translateX(-220px)": "translateX(0px)";
+    sn.style.transition = "transform 0.45s ease-in-out";
+    sn.style.transform = toggle ? "translateX(-220px)" : "translateX(0px)";
     toggle = !toggle;
 });
+
 
 var home = document.querySelector(".home");
 var workspace = document.querySelector(".workspace");
