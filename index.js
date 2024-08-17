@@ -19,7 +19,7 @@ function helper(curr) {
     currentSection.style.display = "none";
     curr.style.display = "block";
     currentSection = curr;
-    sn.style.display = "none";
+    sn.style.transform = "translateX(-220px)";
     toggle = true; // Reset toggle state to ensure sidebar can be toggled again
 }
 
