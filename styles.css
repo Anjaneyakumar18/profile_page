@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color:rgba(73, 66, 87,0.9);
+    background-color:gray;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -251,7 +251,7 @@ b {
 }
 @media screen and (max-width: 510px) {
     body{
-        background-image: url('./bg3.jpg');
+        background-image: gray;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment:fixed;
